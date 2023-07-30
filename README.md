@@ -170,7 +170,7 @@ Check application online: [Clinic Pulse Online](https://clinic.onoo.app/).
 
 ## License
 
-... under development
+The project has been completed and will not be further developed, but any suggestions are welcome. Please open issues to share your feedback.
 
 [[top](#table-of-contents)]
 
