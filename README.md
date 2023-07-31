@@ -1,5 +1,8 @@
 <div align="center">
-    <h1>Clinic Pulse</h1>
+    <h1>
+        <img src="docs/img/logos/clinic-pulse-logo.svg" width="42" height="42" alt="dotnet" title=".NET">
+        Clinic Pulse
+    </h1>
     <h3>
         <a href="#preview">
             Preview
@@ -51,8 +54,8 @@
 - [Functionality](#functionality)
 - [Database Schema](#database-schema)
 - [Feature List](#feature-list)
-- [Technologies, Tools, Strategies and Programming Techniques](#technologies-tools-strategies-and-programming-techniques)
-- [Dependencies](#dependencies)
+- [Technologies, Strategies and Programming Techniques](#technologies-strategies-and-programming-techniques)
+- [Dependencies, Tools](#dependencies-tools)
 - [Workflow](#workflow)
 - [Summary](#summary)
 - [Known Issues](#known-issues)
@@ -68,10 +71,13 @@
 
 ## Preview
 
-Remember! The application `is not finished` and may have many errors. I'm still developing it, so most often a new version lands on GitHub and hosting every day. If logins and passwords are provided for the application, you can frolic changing whatever you want.
+Remember! The application `is not finished` and `may have many errors`. I'm still developing it, so most often a new version lands on GitHub and hosting every day. If logins and passwords are provided for the application, you can frolic changing whatever you want.
+
+### User accounts available in the application
 
 ```
-    LOGIN       admim@test.com
+    ROLE:       Admin
+    USER:       admim@test.com
     PASSWORD:   TEst!@12
 ```
 
@@ -79,13 +85,15 @@ Remember! The application `is not finished` and may have many errors. I'm still 
 
 There are two ways to run the application. You can do it locally on your computer, in a maximum of 10 minutes. You don't even have to install MSSQL, because Visual Studio has built-in support for simple databases. This method is discussed in the Quickstart section.
 
-Check how to run the application locally: [Clinic Pulse Local](#quickstart).
+> Check how to run the application locally: [Clinic Pulse Local](#quickstart)  
+> You can use already configured accounts in the application: [User Accounts](#user-accounts-available-in-the-application)
 
 ### Online version of the application
 
-> The application may contain errors, do not submit any sensitive data there. I bear no responsibility for any data loss, and you use the application at your own risk, waiving any claims.
+The application `may contain errors`, do not submit `any sensitive dat`a there. I bear `no responsibility for any data loss`, and you use the application `at your own risk`, waiving any claims.
 
-Check application online: [Clinic Pulse Online](https://clinic.onoo.app/).
+> Preview application online: [Clinic Pulse Online](https://clinic.onoo.app/)  
+> You can use already configured accounts in the application: [User Accounts](#user-accounts-available-in-the-application)
 
 [[top](#table-of-contents)]
 
@@ -97,31 +105,118 @@ Check application online: [Clinic Pulse Online](https://clinic.onoo.app/).
 
 ## Functionality
 
-... under development
+The application is a comprehensive manager for a medical clinic. It assists in clinic management from an administrative perspective and allows patients to browse the clinic's offerings, schedule visits, and familiarize themselves with information about individual doctors. Patients can also purchase selected services, or contact the reception by phone.
+
+The application consists of the following elements:
+
+- A module for all users, available publicly
+- A patient module, available after logging in
+- A reception module, available after logging in
+- A doctor's module, available after logging in
+- An administrative module, available after logging in
 
 [[top](#table-of-contents)]
 
 ## Database Schema
 
-... under development
+<details>
+<summary>Database Schema Details<h2/></summary>
+</details>
 
 [[top](#table-of-contents)]
 
 ## Feature List
 
-... under development
+Unregistered users have the ability to:
+
+- Browse the clinic's offer
+- Familiarize themselves with the price list
+- View individual doctors' pages
+- Choose the application's language
+- Set up a patient account
+- Log into the patient panel
+- Send a message to the clinic
+
+Logged in patients can:
+
+- Browse visit history
+- Browse prescribed medications history
+- Browse recommendations history
+- Edit their personal data
+- Reserve/Refuse a visit
+- Pay for a visit in the payment system (sandbox Przelewy24.pl)
+- Print prescriptions and doctor's recommendations to PDF
+- Print invoices to PDF
+
+The reception staff can:
+
+- Search for a patient and check their scheduled visits
+- Search for a patient and schedule a visit
+- Add/Edit a patient
+- Check doctors' work schedules
+
+Doctors can:
+
+- Browse their work schedule
+- View information about their patients
+- Add/Modify their work schedule
+- Create/Edit a page with information about themselves
+
+In the administrative module, there is the ability to:
+
+- Edit website content
+- Add/Remove/Edit services
+- Add/Remove/Edit doctors
+- Add/Remove/Edit employees
+- Add/Remove/Edit patients
+- Manage schedules
+- Add roles in the system
+- Manage files uploaded to the server (graphics, PDFs)
+
+Functional elements of the application:
+
+- Multilingual content support
+- Pagination of displayed data
+- Dynamic data searching
+- Filter of active records (soft delete)
+- Profile pictures support
 
 [[top](#table-of-contents)]
 
-## Technologies, Tools, Strategies and Programming Techniques
+## Technologies, Strategies and Programming Techniques
 
-... under development
+- ASP.NET Core 6 MVC
+- ASP.NET Core 6 Web API
+- C# 10
+- Entity Framework (utilizing both **Annotations** and **Fluent API**)
+- Code First database and Seeding
+- Automatic Resource Management with the **using** statement (during seeding)
+- Soft Delete
+- SOLID
+- CRUD
+- CQRS
+- Clean Architecture
+- DTO, DAO, ViewModel
+- Dependency Injection
+- Extension Methods
+- Middleware
+- Data validation
+- Unit and integration tests
 
 [[top](#table-of-contents)]
 
-## Dependencies
+## Dependencies, Tools
 
-... under development
+- Microsoft.EntityFrameworkCore.SqlServer 7.0.9
+- Microsoft.EntityFrameworkCore.Tools 7.0.9
+- Microsoft.VisualStudio.Web.CodeGeneration.Design 6.0.15
+- Swagger
+- AJAX
+- MediatR
+- FluentValidation
+- AutoMapper
+- SignalR
+- Toastr
 
 [[top](#table-of-contents)]
 
@@ -138,7 +233,9 @@ Check application online: [Clinic Pulse Online](https://clinic.onoo.app/).
     - [ ] ⏳ Define the features of the application
     - [x] Choose the technology and architecture of the application
     - [ ] ⏳ Design the database
-    - [ ] ⏳ Design the UI/UX
+    - [ ] Design the UI/UX
+        - [ ] Design light theme
+        - [ ] Design dark theme
     - [ ] ⏳ Plan the work and create a Workflow
 - [ ] ⏳ Prepare application infrastructure
     - [x] Create a project on GitHub
@@ -147,24 +244,47 @@ Check application online: [Clinic Pulse Online](https://clinic.onoo.app/).
     - [x] Add application to the Showroom [clinic.onoo.app](https://clinic.onoo.app/)
     - [ ] Create solution structure in Visual Studio 2022
         - [ ] Add project ASP.NET Core 6 MVC to solution
+- [ ] Database, `code-first` approach
+    - [ ] Plan the Entity classes, incorporate the `soft-delete` strategy
+    - [ ] Adď the Entity classes
+    - [ ] Add Annotations and Fluent API configuration to the Entity classes
+    - [ ] Add Database configuration
+    - [ ] Add migration
+    - [ ] Update database
+- [ ] Add demonstration data to the application (seeding).
+- [ ] Completion of project documentation
+    - [x] Header
+    - [x] Description
+    - [x] Preview
+    - [ ] Quickstart
+    - [ ] ⏳ Functionality
+    - [ ] ⏳ Database Schema
+    - [ ] ⏳Feature List
+    - [x] Technologies, Strategies and Programming Techniques
+    - [x] Dependencies, Tools
+    - [ ] Workflow
+    - [ ] Summary
+    - [ ] Known Issues
+    - [x] Contribution Guidelines
+    - [x] License
 
 [[top](#table-of-contents)]
 
 ## Summary
 
-... under development
+The summary will be provided once the project is completed.
 
 [[top](#table-of-contents)]
 
 ## Known Issues
 
-... under development
+So far, no insurmountable problems have been identified, so the work is ongoing.
 
 [[top](#table-of-contents)]
 
 ## Contribution Guidelines
 
-... under development
+This is an educational project and I'm working on it independently, but any suggestions or comments are highly appreciated. Please open issues to share your feedback.
 
 [[top](#table-of-contents)]
 
