@@ -127,7 +127,7 @@ The application consists of the following elements:
 
 ## Feature List
 
-Unregistered users have the ability to:
+### Unregistered users have the ability to:
 
 - Browse the clinic's offer
 - Familiarize themselves with the price list
@@ -137,7 +137,7 @@ Unregistered users have the ability to:
 - Log into the patient panel
 - Send a message to the clinic
 
-Logged in patients can:
+### Logged in patients can:
 
 - Browse visit history
 - Browse prescribed medications history
@@ -148,21 +148,21 @@ Logged in patients can:
 - Print prescriptions and doctor's recommendations to PDF
 - Print invoices to PDF
 
-The reception staff can:
+### The reception staff can:
 
 - Search for a patient and check their scheduled visits
 - Search for a patient and schedule a visit
 - Add/Edit a patient
 - Check doctors' work schedules
 
-Doctors can:
+### Doctors can:
 
 - Browse their work schedule
 - View information about their patients
 - Add/Modify their work schedule
 - Create/Edit a page with information about themselves
 
-In the administrative module, there is the ability to:
+### In the administrative module, there is the ability to:
 
 - Edit website content
 - Add/Remove/Edit services
@@ -173,7 +173,7 @@ In the administrative module, there is the ability to:
 - Add roles in the system
 - Manage files uploaded to the server (graphics, PDFs)
 
-Functional elements of the application:
+### Functional elements of the application:
 
 - Multilingual content support
 - Pagination of displayed data
